@@ -16,17 +16,3 @@ export const fetchQuote = () => {
 //     return await result.json()
 //   }
 // }
-
-// export async function fetchCityForecast(cityName: string): Promise<WeatherLocation | undefined>
-// {
-//   const result = await fetch(`${baseURL}weather?q=${cityName}&appid=${apiKey}`)
-//
-//   if (result.status === 404) return undefined;
-//   if (result.status !== 200) throw new Error('Failed to read location data');
-//
-//   if (result.status === 200) {
-//
-//     const newResult = await result.json()
-//     return cleanCurrentWeatherData(newResult)
-//   }
-// };
