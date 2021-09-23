@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { fetchQuote } from '../../apiCalls';
+import { Header } from '../Header/Header'
 
 function App() {
   const [quote, setQuote] = useState('') //sets random quote fetched by api get request
@@ -27,9 +28,7 @@ function App() {
 
   return (
     <div className="App">
-    <header className="header">
-    yuletide yeezy
-    </header>
+      <Header />
     </div>
   );
 }
