@@ -1,10 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { fetchQuote } from '../../apiCalls';
 import { Header } from '../Header/Header'
+import { GenerateSection } from '../GenerateSection/GenerateSection'
 
 function App() {
-  const [quote, setQuote] = useState('') //sets random quote fetched by api get request
   const [image, setImage] = useState('') //string should be url for image?
   const [favQuotes, setFavQuotes] = useState([]) //adds card to favorites state
   const [error, setError] = useState('') //error in api
@@ -16,10 +15,10 @@ function App() {
   //   .then(res => setQuote(res))
   // }, [])
 
-const generateQuote = () => {
-  fetchQuote()
-  .then(res => setQuote(res))
-}
+// const generateQuote = () => {
+//   fetchQuote()
+//   .then(res => setQuote(res))
+// }
 
   //need to fetchQuote when user clicks generate quote button (quote is already random)
   //need to add assets folder of images to sort through
@@ -34,11 +33,15 @@ const generateQuote = () => {
   return (
     <div className="App">
       <Header />
-      <section className='side-bar'>
-        <button className='gen-quote-btn' onClick={generateQuote}>generate quote</button>
-      </section>
+      <GenerateSection />
     </div>
   );
 }
+
+// <button className='gen-image-btn' onClick={generateImage}>generate image</button>
+
+// <section className='side-bar'>
+// <button className='gen-quote-btn' onClick={generateQuote}>generate quote</button>
+// </section>
 
 export default App;

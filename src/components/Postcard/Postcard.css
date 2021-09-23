@@ -1,0 +1,13 @@
+.postcard {
+  /* border: 1px solid black; */
+  width: 75%;
+  height: 10vh;
+}
+
+.quote-box {
+  border: 1px solid black;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  padding: 3%;
+}
