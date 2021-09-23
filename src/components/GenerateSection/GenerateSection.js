@@ -5,20 +5,20 @@ import { Postcard } from '../Postcard/Postcard'
 
 export const GenerateSection = () => {
   const [quote, setQuote] = useState('')
-  const [select, setSelect] = useState(false)
+  const [btnClicked, setBtnClicked] = useState(false)
 
   const generateQuote = () => {
     fetchQuote()
     .then(res => setQuote(res))
-    setSelect(true)
+    setBtnClicked(true)
   }
 
   return (
     <div className='home'>
       <aside className='generate-aside'>
-        <button className='gen-quote-btn' onClick={generateQuote} onSelect={select}>generate quote</button>
+        <button className='gen-quote-btn' onClick={generateQuote}>generate quote</button>
       </aside>
-      <Postcard quote={quote} select={select}/>
+      <Postcard quote={quote} btnClicked={btnClicked}/>
     </div>
   );
 }
