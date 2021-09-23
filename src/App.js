@@ -1,30 +1,23 @@
 import './App.css';
-import { Component } from 'react'
-import { fetchQuote } from './apiCalls.js'
+import { useState, useEffect } from 'react';
+import { fetchQuote } from './apiCalls.js';
 
 
-class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      postCards: [],
-      error: ''
-    }
-  }
+function App() {
+  const [favQuotes, setFavQuotes] = useState([])
 
-  componentDidMount = () => {
+  useEffect(() => {
     fetchQuote()
-  }
+    .then(data => setFavQuotes(data))
+  }, [])
 
-render() {
-    return (
-      <div className="App">
-      <header className="header">
-      yuletide yeezy
-      </header>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+    <header className="header">
+    yuletide yeezy
+    </header>
+    </div>
+  );
 }
 
 export default App;
