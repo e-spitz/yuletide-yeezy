@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { fetchQuote } from './apiCalls.js';
+import { fetchQuote } from '../../apiCalls';
 
 function App() {
   const [quote, setQuote] = useState('') //sets random quote fetched by api get request
@@ -22,6 +22,8 @@ function App() {
   //if !quote || !image then disable button
 
   //function to randomize photos and setState to random photo
+
+  //assets of images folder
 
   return (
     <div className="App">
