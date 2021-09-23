@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.generate-aside {
+  background: #00556f;
+  height: 100vh;
+  width: 28%;
+  border-right: 2px dotted whitesmoke;
+}
+
+.gen-quote-btn {
+  font-family: 'Poppins';
+  border: none;
+  background-color: darkgrey;
+  border-radius: 3%;
+  height: 6vh;
+  width: 15vw;
+  font-size: 1em;
+  float: center;
+  margin-top: 20%;
+}
+
+.gen-quote-btn:hover {
+  cursor: pointer;
+  color: #00556f;
+  background: whitesmoke;
+}

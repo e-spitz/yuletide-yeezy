@@ -1,0 +1,13 @@
+.postcard {
+  width: 75%;
+}
+
+.quote-box {
+  font-family: 'Carattere';
+  font-size: 2em;
+  border: 1px solid black;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  padding: 3%;
+}
