@@ -1,13 +1,30 @@
 import './App.css';
+import { Component } from 'react'
+import { fetchQuote } from './apiCalls.js'
 
-function App() {
-  return (
-    <div className="App">
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      postCards: [],
+      error: ''
+    }
+  }
+
+  componentDidMount = () => {
+    fetchQuote()
+  }
+
+render() {
+    return (
+      <div className="App">
       <header className="header">
-        yuletide yeezy
+      yuletide yeezy
       </header>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;
