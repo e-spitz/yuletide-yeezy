@@ -6,7 +6,8 @@
 .generate-aside {
   background: #00556f;
   height: 100vh;
-  width: 27%;
+  width: 28%;
+  border-right: 2px dotted whitesmoke;
 }
 
 .gen-quote-btn {
@@ -15,9 +16,10 @@
   background-color: darkgrey;
   border-radius: 3%;
   height: 6vh;
-  width: 10vw;
+  width: 15vw;
   font-size: 1em;
   float: center;
+  margin-top: 20%;
 }
 
 .gen-quote-btn:hover {

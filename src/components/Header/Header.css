@@ -4,32 +4,33 @@
   color: white;
   height: 20vh;
   margin: 0;
+  border-bottom: 2px dotted whitesmoke;
 }
 
- p {
-   margin: 0;
- }
+p {
+ margin: 0;
+}
 
- .header-div {
-   display: flex;
-   justify-content: space-between;
+.header-div {
+ display: flex;
+ justify-content: space-between;
 
- }
+}
 
- .header-title {
-   font-family: 'Italianno';
-   letter-spacing: 16px;
-   font-size: 6.5em;
-   margin-left: 3%;
-   padding-top: 1%;
- }
+.header-title {
+ font-family: 'Italianno';
+ letter-spacing: 16px;
+ font-size: 6.5em;
+ margin-left: 3%;
+ padding-top: 1%;
+}
 
- .header-des {
-   font-size: 1.7em;
-   font-style: italic;
-   padding-top: 7%;
-   margin-right: 1%;
- }
+.header-des {
+ font-size: 1.7em;
+ font-style: italic;
+ padding-top: 7%;
+ margin-right: 1%;
+}
 
 /* .header-link {
   text-decoration: none;
