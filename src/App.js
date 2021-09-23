@@ -5,10 +5,12 @@ import { fetchQuote } from './apiCalls.js';
 
 function App() {
   const [favQuotes, setFavQuotes] = useState([])
+  const [error, setError] = useState('')
+  const [warning, setWarning] = useState('')
 
   useEffect(() => {
     fetchQuote()
-    .then(data => setFavQuotes(data))
+    .then(res => setFavQuotes(res))
   }, [])
 
   return (
