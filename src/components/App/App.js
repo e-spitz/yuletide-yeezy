@@ -11,10 +11,15 @@ function App() {
   const [warning, setWarning] = useState('') //warning if user does not set an image or quote
 
 //no api call needs to be done on window load, this is just to test
-  useEffect(() => {
-    fetchQuote()
-    .then(res => setFavQuotes(res))
-  }, [])
+  // useEffect(() => {
+  //   fetchQuote()
+  //   .then(res => setQuote(res))
+  // }, [])
+
+const generateQuote = () => {
+  fetchQuote()
+  .then(res => setQuote(res))
+}
 
   //need to fetchQuote when user clicks generate quote button (quote is already random)
   //need to add assets folder of images to sort through
@@ -29,6 +34,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <section className='side-bar'>
+        <button className='gen-quote-btn' onClick={generateQuote}>generate quote</button>
+      </section>
     </div>
   );
 }
