@@ -1,28 +1,35 @@
 .home {
   display: flex;
-  justify-content: space-between;
+    /* justify-content: space-evenly; */
+  align-items: center;
 }
 
 .generate-aside {
   background: #00556f;
   height: 100vh;
-  width: 28%;
+  width: 28vw;
   border-right: 2px dotted whitesmoke;
 }
 
-.gen-quote-btn {
+.gen-quote-btn,
+.gen-image-btn {
   font-family: 'Poppins';
   border: none;
-  background-color: darkgrey;
+  background-color: lightgrey;
   border-radius: 3%;
-  height: 6vh;
-  width: 15vw;
-  font-size: 1em;
+  height: 8vh;
+  width: 20vw;
+  font-size: 1.5em;
   float: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
-.gen-quote-btn:hover {
+.gen-quote-btn {
+  margin-top: 30%;
+}
+
+.gen-quote-btn:hover,
+.gen-image-btn:hover {
   cursor: pointer;
   color: #00556f;
   background: whitesmoke;
