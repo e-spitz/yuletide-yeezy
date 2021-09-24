@@ -1,7 +1,7 @@
 import './GenerateSection.css'
 import { fetchQuote } from '../../apiCalls';
 import { useState } from 'react';
-import { Postcard } from '../Postcard/Postcard'
+import { PostcardContainer } from '../PostcardContainer/PostcardContainer'
 
 export const GenerateSection = () => {
   const [quote, setQuote] = useState('')
@@ -11,7 +11,7 @@ export const GenerateSection = () => {
 
   const generateQuote = () => {
     fetchQuote()
-    .then(res => setQuote(res))
+    .then(res => setQuote(res.quote))
     setBtnClicked(true)
   }
 
@@ -33,7 +33,7 @@ export const GenerateSection = () => {
         <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote</button>
         <button className='gen-image-btn' onClick={generateImage}>generate image</button>
       </aside>
-      <Postcard quote={quote} btnClicked={btnClicked} imgBtnClicked={imgBtnClicked} randomImage={image}/>
+      <PostcardContainer randomQuote={quote} btnClicked={btnClicked} imgBtnClicked={imgBtnClicked} randomImage={image}/>
     </div>
   );
 }
