@@ -2,7 +2,6 @@ import './GenerateSection.css'
 import { fetchQuote } from '../../apiCalls';
 import { useState } from 'react';
 import { Postcard } from '../Postcard/Postcard'
-// import { images } from '../../images'
 
 export const GenerateSection = () => {
   const [quote, setQuote] = useState('')
