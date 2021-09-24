@@ -1,6 +1,7 @@
 .home {
   display: flex;
   align-items: center;
+  background-image: url('../../assets/img1.jpg') no-repeat;
 }
 
 .generate-aside {

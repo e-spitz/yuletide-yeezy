@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55vw;
-  height: 55vh;
-  margin-left: 7%;
+  width: 50vw;
+  height: 50vh;
+  margin-left: 10%;
 }
 
 /* .quote-box,

@@ -5,9 +5,6 @@ import { GenerateSection } from '../GenerateSection/GenerateSection'
 import { fetchQuote } from '../../apiCalls';
 import { Route } from 'react-router-dom';
 
-// import { images } from '../../images'
-
-
 function App() {
   // const [homeQuote, setHomeQuote] = useState('')
   const [error, setError] = useState('') //error in api
@@ -20,15 +17,7 @@ function App() {
   //   .then(res => setHomeQuote(res))
   // }, [])
 
-  //need to fetchQuote when user clicks generate quote button (quote is already random)
-  //need to add assets folder of images to sort through
-  //random image created with generate image button
-  //generate button or should it just be add to favorite button?
-  //if !quote || !image then disable button
-
-  //function to randomize photos and setState to random photo
-
-  //assets of images folder
+//add set error and warning to fetch call
 
   return (
     <div className="App">
@@ -37,11 +26,5 @@ function App() {
     </div>
   );
 }
-
-// <button className='gen-image-btn' onClick={generateImage}>generate image</button>
-
-// <section className='side-bar'>
-// <button className='gen-quote-btn' onClick={generateQuote}>generate quote</button>
-// </section>
 
 export default App;
