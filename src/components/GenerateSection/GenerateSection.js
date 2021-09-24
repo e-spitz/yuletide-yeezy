@@ -30,7 +30,7 @@ export const GenerateSection = () => {
   return (
     <div className='home'>
       <aside className='generate-aside'>
-        <button className='gen-quote-btn' onClick={generateQuote}>generate quote</button>
+        <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote</button>
         <button className='gen-image-btn' onClick={generateImage}>generate image</button>
       </aside>
       <Postcard quote={quote} btnClicked={btnClicked} imgBtnClicked={imgBtnClicked} randomImage={image}/>

@@ -18,6 +18,7 @@ function App() {
     fetchQuote()
     .then(res => setHomeQuote(res))
   }, [])
+  
   //need to fetchQuote when user clicks generate quote button (quote is already random)
   //need to add assets folder of images to sort through
   //random image created with generate image button
