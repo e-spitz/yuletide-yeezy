@@ -2,7 +2,7 @@ import './GenerateSection.css'
 import { fetchQuote } from '../../apiCalls';
 import { useState } from 'react';
 import { Postcard } from '../Postcard/Postcard'
-import { images } from '../../images'
+// import { images } from '../../images'
 
 export const GenerateSection = () => {
   const [quote, setQuote] = useState('')
@@ -16,17 +16,16 @@ export const GenerateSection = () => {
     setBtnClicked(true)
   }
 
-  const getRandomIndex = (array) => {
-    return Math.floor(Math.random() * array.length);
+  const getRandomImage = () => {
+    const index = Math.floor(Math.random() * 30) + 1;
+    const randomImage = require(`../../assets/img${index}.jpg`).default;
+    setImage(randomImage)
+    return randomImage;
   }
 
   const generateImage = () => {
-    const randomImage = images[getRandomIndex(images)]
-    console.log(randomImage)
-    setImage(randomImage)
+    getRandomImage()
     setImgBtnClicked(true)
-    console.log(typeof randomImage)
-    return randomImage;
   }
 
   return (

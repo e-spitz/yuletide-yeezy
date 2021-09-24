@@ -2,11 +2,10 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { Header } from '../Header/Header'
 import { GenerateSection } from '../GenerateSection/GenerateSection'
-// import image1 from '../../assets/img1.jpg'
+// import { images } from '../../images'
 
 
 function App() {
-  const [image, setImage] = useState('') //string should be url for image?
   const [favQuotes, setFavQuotes] = useState([]) //adds card to favorites state
   const [error, setError] = useState('') //error in api
   const [warning, setWarning] = useState('') //warning if user does not set an image or quote
