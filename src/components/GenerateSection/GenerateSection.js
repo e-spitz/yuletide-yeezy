@@ -69,9 +69,9 @@ export const GenerateSection = () => {
   return (
     <div className='home'>
       <aside className='generate-aside'>
-        <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote</button>
-        <button className='gen-image-btn' onClick={generateImage}>generate image</button>
-        <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites</button>
+        <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote <i class="fas fa-comment-dots"></i></button>
+        <button className='gen-image-btn' onClick={generateImage}>generate image <i class="fas fa-image"></i></button>
+        <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites <i class="fas fa-heart"></i></button>
         {warning && <p className='warning'>{warning}</p>}
       </aside>
       <PostcardContainer

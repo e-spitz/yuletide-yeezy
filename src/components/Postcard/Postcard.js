@@ -1,6 +1,5 @@
 import './Postcard.css'
 
-
 export const Postcard = ({ error, id, key, quote, image, btnClicked, imgBtnClicked }) => {
 
   return (
