@@ -39,7 +39,7 @@ export const GenerateSection = () => {
       img: image,
       quote: quote
     }
-    
+
     const checkImg = findFav(quote, image)
 
     if (btnClicked && !checkImg) {
@@ -52,13 +52,14 @@ export const GenerateSection = () => {
       <aside className='generate-aside'>
         <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote</button>
         <button className='gen-image-btn' onClick={generateImage}>generate image</button>
+        <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites</button>
       </aside>
       <PostcardContainer
         randomQuote={quote}
         btnClicked={btnClicked}
         imgBtnClicked={imgBtnClicked}
         randomImage={image}
-        saveToFav={saveToFav}/>
+        />
     </div>
   );
 }

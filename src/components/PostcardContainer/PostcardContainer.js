@@ -12,7 +12,6 @@ export const PostcardContainer = ({ randomQuote, btnClicked, imgBtnClicked, rand
        image={randomImage}
        btnClicked={btnClicked}
        imgBtnClicked={imgBtnClicked}
-       saveToFav={saveToFav}
        />
       </section>
    )
