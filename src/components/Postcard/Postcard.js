@@ -1,12 +1,16 @@
 import './Postcard.css'
 
-export const Postcard = ({ quote, btnClicked, imgBtnClicked, randomImage }) => {
+export const Postcard = ({ error, id, key, quote, image, btnClicked, imgBtnClicked }) => {
 
   return (
-      <section className='postcard'>
-      {!quote && !btnClicked ? <p className='quote-box'>Quote goes here...</p> : <section className='quote-box'>{quote.quote}</section>}
+    <section className='postcard'>
+      {error && <p className='error'>{error}</p>}
+      {!quote && !btnClicked && <p className='quote-box'>Quote goes here...</p>}
+      {!error && quote && btnClicked && <p className='quote-box'>{quote}</p>}
       {quote && !btnClicked && <p className='loading quote-box'>Kanye's thinkin' up a good one..</p>}
-      {!imgBtnClicked ? <img className='image-box'src={require('../../assets/img12.jpg').default} alt='Kanye Holiday card'/> : <img className='image-box' src={randomImage} alt='Kanye Holiday card'/>}
-      </section>
+      <div className='img-div'>
+      {!imgBtnClicked ? <img className='image-box' src={require('../../assets/img12.jpg').default} alt='Kanye Holiday card'/> : <img className='image-box' src={image} alt='Kanye Holiday card'/>}
+      </div>
+    </section>
   )
 }

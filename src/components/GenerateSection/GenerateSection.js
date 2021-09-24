@@ -1,19 +1,36 @@
 import './GenerateSection.css'
 import { fetchQuote } from '../../apiCalls';
 import { useState } from 'react';
-import { Postcard } from '../Postcard/Postcard'
+import { PostcardContainer } from '../PostcardContainer/PostcardContainer'
 
 export const GenerateSection = () => {
   const [quote, setQuote] = useState('')
   const [btnClicked, setBtnClicked] = useState(false)
   const [imgBtnClicked, setImgBtnClicked] = useState(false)
   const [image, setImage] = useState('')
+  const [favs, setFavs] = useState([]) //adds card to favorites state
+  const [error, setError] = useState('')
+  const [warning, setWarning] = useState('')
 
-  const generateQuote = () => {
-    fetchQuote()
-    .then(res => setQuote(res))
-    setBtnClicked(true)
+
+  const resetAlerts = () => {
+    setError('')
+    setWarning('')
   }
+
+  const generateQuote = async () => {
+    resetAlerts()
+    const fetchedQuote = await fetchQuote()
+    if (!fetchedQuote.quote) {
+      setError(`Kanye couldn't deliver. Check back later!`);
+    } else {
+      setQuote(fetchedQuote.quote)
+      setBtnClicked(true)
+    }
+  }
+
+  //add set error and warning to fetch call
+
 
   const getRandomImage = () => {
     const index = Math.floor(Math.random() * 30) + 1;
@@ -23,17 +40,47 @@ export const GenerateSection = () => {
   }
 
   const generateImage = () => {
+    setWarning('')
     getRandomImage()
     setImgBtnClicked(true)
+  }
+
+  const findFav = (quote, image) => {
+    if (favs.length >= 1) {
+      return favs.find(fav => fav.img === image && fav.quote === quote)
+    }
+  }
+
+  const saveToFav = (quote, image) => {
+    const favObj = {
+      img: image,
+      quote: quote
+    }
+
+    const checkImg = findFav(quote, image)
+
+    if (btnClicked && !checkImg) {
+      setFavs([favObj, ...favs])
+    } else {
+      setWarning('Already saved!')
+    }
   }
 
   return (
     <div className='home'>
       <aside className='generate-aside'>
-        <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote</button>
-        <button className='gen-image-btn' onClick={generateImage}>generate image</button>
+        <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote <i class="fas fa-comment-dots"></i></button>
+        <button className='gen-image-btn' onClick={generateImage}>generate image <i class="fas fa-image"></i></button>
+        <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites <i class="fas fa-heart"></i></button>
+        {warning && <p className='warning'>{warning}</p>}
       </aside>
-      <Postcard quote={quote} btnClicked={btnClicked} imgBtnClicked={imgBtnClicked} randomImage={image}/>
+      <PostcardContainer
+        error={error}
+        randomQuote={quote}
+        btnClicked={btnClicked}
+        imgBtnClicked={imgBtnClicked}
+        randomImage={image}
+        />
     </div>
   );
 }
