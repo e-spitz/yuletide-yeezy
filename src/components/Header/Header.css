@@ -20,7 +20,7 @@ p {
 .header-title {
  font-family: 'Italianno';
  letter-spacing: 16px;
- font-size: 6.5em;
+ font-size: 6em;
  margin-left: 3%;
  padding-top: 1%;
 }
@@ -30,6 +30,12 @@ p {
  font-style: italic;
  padding-top: 7%;
  margin-right: 1%;
+}
+
+.png {
+  height: 13vh;
+  margin-left: -18%;
+  margin-top: 2%;
 }
 
 /* .header-link {
