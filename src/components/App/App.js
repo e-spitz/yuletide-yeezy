@@ -10,9 +10,9 @@ import { Route } from 'react-router-dom';
 
 function App() {
   // const [homeQuote, setHomeQuote] = useState('')
-  const [favQuotes, setFavQuotes] = useState([]) //adds card to favorites state
   const [error, setError] = useState('') //error in api
   const [warning, setWarning] = useState('') //warning if user does not set an image or quote
+
 
 //no api call needs to be done on window load, this is just to test
   // useEffect(() => {
