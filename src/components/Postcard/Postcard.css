@@ -1,13 +1,43 @@
 .postcard {
-  width: 75%;
-}
-
-.quote-box {
+  /* width: 50%; */
+  /* border: 1px solid black; */
+  /* height: 50%; */
+  /* margin-left: 2%;
+  margin-right: 2%; */
   font-family: 'Carattere';
   font-size: 2em;
-  border: 1px solid black;
-  margin-left: 10%;
+  margin-left: 8%;
+}
+
+/* .quote-box,
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Carattere';
+  font-size: 2em;
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-left: 15%;
   margin-right: 10%;
-  margin-top: 5%;
-  padding: 3%;
+  margin-top: 2%;
+  padding: 2%;
+} */
+
+.quote-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  border: 1px solid red;
+}
+
+.image-box {
+  height: 80vh;
+  border: 1px solid black;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
 }
