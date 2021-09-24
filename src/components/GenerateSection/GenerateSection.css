@@ -36,3 +36,8 @@
   color: #00556f;
   background: whitesmoke;
 }
+
+.warning {
+  font-size: 1.3em;
+  color: whitesmoke;
+}

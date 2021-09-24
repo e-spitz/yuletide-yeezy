@@ -40,6 +40,7 @@ export const GenerateSection = () => {
   }
 
   const generateImage = () => {
+    setWarning('')
     getRandomImage()
     setImgBtnClicked(true)
   }
@@ -60,6 +61,8 @@ export const GenerateSection = () => {
 
     if (btnClicked && !checkImg) {
       setFavs([favObj, ...favs])
+    } else {
+      setWarning('Already saved!')
     }
   }
 
@@ -69,6 +72,7 @@ export const GenerateSection = () => {
         <button className='gen-quote-btn' onClick={(e) => generateQuote(e)}>generate quote</button>
         <button className='gen-image-btn' onClick={generateImage}>generate image</button>
         <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites</button>
+        {warning && <p className='warning'>{warning}</p>}
       </aside>
       <PostcardContainer
         error={error}
