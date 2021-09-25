@@ -66,10 +66,6 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
     }
   }
 
-  // const removeFav = (id) => {
-  //   removeFavorite(id)
-  // }
-
   return (
     <div className='home'>
       <aside className='generate-aside'>
@@ -78,7 +74,7 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
         <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites <i class="fas fa-heart"></i></button>
         {warning && <p className='warning'>{warning}</p>}
         <NavLink to='/favorites' className='fav-link'>
-          <button className='view-fav-btn'>view favorites {favorites.length ? <i class="fas fa-heart"></i> : ''}</button>
+          <button className='view-fav-btn'>view favorites</button>
         </NavLink>
       </aside>
       <PostcardContainer
@@ -92,4 +88,5 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
   );
 }
 
+// {favorites.length ? <i class="fas fa-heart"></i> : ''}
 //add some sort of visual to show that add to favs button did something (i have heart adding to view favs button for now)
