@@ -73,19 +73,17 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
         <button className='gen-image-btn' onClick={generateImage}>generate image <i class="fas fa-image"></i></button>
         <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites <i class="fas fa-heart"></i></button>
         {warning && <p className='warning'>{warning}</p>}
-
-          <NavLink to='/favorites' className='fav-link'>
-            <button className='view-fav-btn'>view favorites</button>
-          </NavLink>
-
+        <NavLink to='/favorites' className='fav-link'>
+          <button className='view-fav-btn'>view favorites</button>
+        </NavLink>
       </aside>
       <PostcardContainer
         error={error}
-        randomQuote={quote}
+        quote={quote}
         btnClicked={btnClicked}
         imgBtnClicked={imgBtnClicked}
-        randomImage={image}
+        image={image}
       />
     </div>
-  )
+  );
 }

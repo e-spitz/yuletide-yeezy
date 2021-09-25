@@ -23,19 +23,4 @@ function App() {
   );
 }
 
-// {!cities.length ? (
-//                    <h2 className="no-city">No forecasts to show</h2>
-//                  ) : (
-//                    <HomeCityCards
-//                      allCities={cities}
-//                      onSelect={(city) => {
-//                        setCurrentCity(city);
-//                        setDetails(city.coord);
-//                      }}
-//                      clickedCard={currentCity}
-//                      details={forecastDetails}
-//                      deleteCity={deleteCity}
-//                    />
-//                  )}
-
 export default App;
