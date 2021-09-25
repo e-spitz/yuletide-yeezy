@@ -1,6 +1,7 @@
 import './Favorites.css'
 import { useState, useEffect } from 'react'
 import { Card } from '../Card/Card'
+import { NavLink } from 'react-router-dom'
 
 export const Favorites = () => {
 const [savedCard, setSavedCard] = useState([])
@@ -26,9 +27,12 @@ useEffect(() => {
 
 const cards = savedCard.map((card) => (<Card card={card} key={card.id} remove={removeFromStorage}/>));
 
+if (!cards.length) {
   return (
-    <section>
-      {cards}
-    </section>
+    <p>No favorites yet. Go <NavLink to='/' className='create-link'>CREATE!</NavLink></p>
+  );
+}
+  return (
+    <section>{cards}</section>
   );
 }
