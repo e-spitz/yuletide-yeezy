@@ -1,30 +1,41 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Header } from '../Header/Header'
 import { GenerateSection } from '../GenerateSection/GenerateSection'
-import { fetchQuote } from '../../apiCalls';
-import { Route } from 'react-router-dom';
+import { Favorites } from '../Favorites/Favorites'
+import { Route, Switch, NavLink } from 'react-router-dom';
 
 function App() {
-  // const [homeQuote, setHomeQuote] = useState('')
-  const [error, setError] = useState('') //error in api
-  const [warning, setWarning] = useState('') //warning if user does not set an image or quote
+  const [favs, setFavs] = useState([])
 
-
-//no api call needs to be done on window load, this is just to test
-  // useEffect(() => {
-  //   fetchQuote()
-  //   .then(res => setHomeQuote(res))
-  // }, [])
-
-//add set error and warning to fetch call
+  const addFavorite = (favObj) => {
+    setFavs([favObj, ...favs])
+  }
 
   return (
     <div className="App">
-    <Route exact path='/' render={() => <Header />}/>
-      <GenerateSection />
+      <Header />
+      <Switch>
+        <Route exact path='/' render={() => <GenerateSection addFavorite={addFavorite} favorites={favs}/>}/>
+        <Route exact path='/favorites' render={() => <Favorites />}/>
+      </Switch>
     </div>
   );
 }
+
+// {!cities.length ? (
+//                    <h2 className="no-city">No forecasts to show</h2>
+//                  ) : (
+//                    <HomeCityCards
+//                      allCities={cities}
+//                      onSelect={(city) => {
+//                        setCurrentCity(city);
+//                        setDetails(city.coord);
+//                      }}
+//                      clickedCard={currentCity}
+//                      details={forecastDetails}
+//                      deleteCity={deleteCity}
+//                    />
+//                  )}
 
 export default App;

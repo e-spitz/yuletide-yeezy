@@ -12,7 +12,8 @@
 
 .gen-quote-btn,
 .gen-image-btn,
-.save-to-fav-btn {
+.save-to-fav-btn,
+.view-fav-btn {
   font-family: 'Poppins';
   border: none;
   background-color: lightgrey;
@@ -32,7 +33,8 @@
 
 .gen-quote-btn:hover,
 .gen-image-btn:hover,
-.save-to-fav-btn:hover {
+.save-to-fav-btn:hover,
+.view-fav-btn:hover  {
   cursor: pointer;
   color: #00556f;
   background: whitesmoke;
