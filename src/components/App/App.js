@@ -12,6 +12,12 @@ function App() {
     setFavs([favObj, ...favs])
   }
 
+  // const removeFavorite = (id) => {
+  //   const remainingCards = setFavs.filter(fav => id !== fav.id)
+  //   console.log(remainingCards)
+  //   setFavs(remainingCards)
+  // }
+
   return (
     <div className="App">
       <Header />

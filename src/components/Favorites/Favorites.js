@@ -4,7 +4,7 @@ import { Card } from '../Card/Card'
 import { NavLink } from 'react-router-dom'
 
 export const Favorites = () => {
-const [savedCard, setSavedCard] = useState([])
+const [savedFavCards, setSavedFavCards] = useState([])
 
 const getFromStorage = () => {
   const keys = Object.keys(localStorage)
@@ -13,26 +13,27 @@ const getFromStorage = () => {
     savedCards = keys.map(key => {
       return JSON.parse(localStorage.getItem(key))
     })
-    setSavedCard([...savedCards])
+    setSavedFavCards([...savedCards])
   }
 }
 
 const removeFromStorage = (id) => {
-  console.log('removed', id)
+  localStorage.removeItem(id)
+  const remainingCards = savedFavCards.filter(card => id !== card.id)
+  setSavedFavCards([...remainingCards])
+  return savedFavCards
 }
 
 useEffect(() => {
   getFromStorage()
 }, [])
 
-const cards = savedCard.map((card) => (<Card card={card} key={card.id} remove={removeFromStorage}/>));
+const cards = savedFavCards.map((card) => (<Card card={card} key={card.id} remove={removeFromStorage}/>));
 
-if (!cards.length) {
   return (
-    <p>No favorites yet. Go <NavLink to='/' className='create-link'>CREATE!</NavLink></p>
-  );
-}
-  return (
+    <>
+    {!cards.length && <h2>No favorites yet. Go <NavLink to='/' className='create-link'>CREATE!</NavLink></h2>}
     <section>{cards}</section>
+    </>
   );
 }
