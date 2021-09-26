@@ -72,6 +72,8 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
   }
 
   return (
+    <>
+    <Header />
     <div className='home'>
       <aside className='generate-aside'>
         <button className='gen-quote-btn' onClick={generateQuote}>generate quote <i class="fas fa-comment-dots"></i></button>
@@ -90,6 +92,7 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
         image={image}
       />
     </div>
+    </>
   );
 }
 //
