@@ -20,4 +20,15 @@ describe("Login Page", () => {
     .contains('neez')
   });
 
+  it('Should display a message when neez button is clicked', () => {
+    cy.get('.no').click()
+    .get('h3')
+    .contains('So sorry! Yeezy says yous ain\'t old enough to enter.')
+  });
+
+  it('Should go to home page when yeez button is clicked', () => {
+    cy.get('.yes').click()
+    .get('.home').should('be.visible')
+  });
+
 });
