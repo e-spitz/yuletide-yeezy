@@ -44,3 +44,12 @@
   font-size: 1.3em;
   color: whitesmoke;
 }
+
+/* try and animate a logo effect on add to fav button click */
+
+/* .snowflake {
+animation: slide;
+position: fixed;
+opacity: 50%;
+animation: slide 2s;
+} */
