@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Card } from '../Card/Card'
 import { NavLink } from 'react-router-dom'
 
+
 export const Favorites = () => {
 const [savedFavCards, setSavedFavCards] = useState([])
 

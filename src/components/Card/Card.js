@@ -9,6 +9,8 @@ export const Card = ({ card, remove }) => {
           <p className='card-quote'>{card.quote}</p>
         </div>
         <img src={card.img}/>
+        <div className='share-btns'>
+        </div>
 
       </section>
     );
