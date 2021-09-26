@@ -1,6 +1,7 @@
 import './Favorites.css'
 import { useState, useEffect } from 'react'
 import { Card } from '../Card/Card'
+import { Header } from '../Header/Header'
 import { NavLink } from 'react-router-dom'
 
 
@@ -36,8 +37,9 @@ const cards = savedFavCards.map((card) => (<Card card={card} key={card.id} remov
 
   return (
     <>
-    {!cards.length && <h2 className='no-fav-header'>No favorites yet. Go <NavLink to='/yuletide-yeezy' className='create-link'>CREATE!</NavLink></h2>}
-    <section className='card-container'>{cards}</section>
+      <Header />
+      {!cards.length && <h2 className='no-fav-header'>No favorites yet. Go <NavLink to='/yuletide-yeezy' className='create-link'>CREATE!</NavLink></h2>}
+      <section className='card-container'>{cards}</section>
     </>
   );
 }

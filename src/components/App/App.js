@@ -9,14 +9,20 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 
 function App() {
   const [favs, setFavs] = useState([])
+  const [noClicked, setNoClicked] = useState(false)
+  const [yesClicked, setYesClicked] = useState(false)
 
   const addFavorite = (favObj) => {
     setFavs([favObj, ...favs])
   }
 
+  // const checkNo = () => {
+  //   setNoClicked(true)
+  //   setTimeout(() => setNoClicked(false), 4000)
+  // }
+
   return (
     <div className="App">
-      <Header />
       <Switch>
         <Route exact path='/' render={() => <Login />}/>
         <Route exact path='/yuletide-yeezy' render={() => <GenerateSection addFavorite={addFavorite} favorites={favs}/>}/>

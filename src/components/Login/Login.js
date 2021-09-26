@@ -20,7 +20,7 @@ export const Login = () => {
               <button className='yes-no-btn yes'>yeez</button>
           </Link>
           <button className='yes-no-btn no' onClick={onClick}>neez</button>
-          {noClicked && <h3 className='so-sorry'>So sorry! Yeezy says you aren't old enough to enter.</h3>}
+          {noClicked && <h3 className='so-sorry'>So sorry! Yeezy says yous ain't old enough to enter.</h3>}
     </div>
   );
 }
