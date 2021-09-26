@@ -76,9 +76,7 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
       <aside className='generate-aside'>
         <button className='gen-quote-btn' onClick={generateQuote}>generate quote <i class="fas fa-comment-dots"></i></button>
         <button className='gen-image-btn' onClick={generateImage}>generate image <i class="fas fa-image"></i></button>
-
         <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites</button>
-
         {warning && <p className='warning'>{warning}</p>}
         <NavLink to='/favorites' className='fav-link'>
           <button className='view-fav-btn'>view favorites</button>

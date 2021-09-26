@@ -11,3 +11,10 @@
   height: 100vh;
   margin-top: 10%;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4em;
+  padding: 2%;
+}
