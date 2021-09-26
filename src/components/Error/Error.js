@@ -7,7 +7,7 @@ export const Error = () => {
       <NavLink className="error-go-back" to="/yuletide-yeezy">
         <img
           className='error-img'
-          src={require('../../assets/404-kanye.jpg').default}
+          src={require('../../assets/404.jpg').default}
           alt="404-kanye-img"
         />
       </NavLink>
