@@ -56,29 +56,30 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
 
     if (btnClicked && imgBtnClicked && !checkFav) {
       addFavorite(favObj)
+      setFavBtnClicked(true)
       localStorage.setItem(favObj.id, JSON.stringify(favObj))
+      setTimeout(() => setFavBtnClicked(false), 2000)
     } else if (!btnClicked) {
       setWarning('Add a quote!')
+      setTimeout(() => setWarning(''), 2000)
     } else if (!imgBtnClicked) {
       setWarning('Add an image!')
+      setTimeout(() => setWarning(''), 2000)
     } else {
       setWarning('Already saved!')
+      setTimeout(() => setWarning(''), 2000)
     }
   }
-
-  // const removeFav = (id) => {
-  //   removeFavorite(id)
-  // }
 
   return (
     <div className='home'>
       <aside className='generate-aside'>
         <button className='gen-quote-btn' onClick={generateQuote}>generate quote <i class="fas fa-comment-dots"></i></button>
         <button className='gen-image-btn' onClick={generateImage}>generate image <i class="fas fa-image"></i></button>
-        <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites <i class="fas fa-heart"></i></button>
+        <button className='save-to-fav-btn' onClick={(e) => saveToFav(quote, image)}>add to favorites</button>
         {warning && <p className='warning'>{warning}</p>}
         <NavLink to='/favorites' className='fav-link'>
-          <button className='view-fav-btn'>view favorites {favorites.length ? <i class="fas fa-heart"></i> : ''}</button>
+          <button className='view-fav-btn'>view favorites</button>
         </NavLink>
       </aside>
       <PostcardContainer
@@ -91,5 +92,8 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
     </div>
   );
 }
-
+//
+// {favBtnClicked && <div className='fav-snowflake'>
+// <img className='snowflake' src="https://img.icons8.com/ios-glyphs/30/000000/snowflake.png"></img></div>}
+// {favorites.length ? <i class="fas fa-heart"></i> : ''}
 //add some sort of visual to show that add to favs button did something (i have heart adding to view favs button for now)

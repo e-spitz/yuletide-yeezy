@@ -1,3 +1,20 @@
 .create-link {
   text-decoration: none;
+  font-style: italic;
+  font-size: 1.4em;
+  color: #3c8d64;
+}
+
+.no-fav-header {
+  font-size: 2.2em;
+  font-weight: 500;
+  height: 100vh;
+  margin-top: 10%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4em;
+  padding: 2%;
 }
