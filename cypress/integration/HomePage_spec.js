@@ -24,23 +24,50 @@ describe('HomePage', () => {
   });
 
   it('Should display alert if user has not picked an image when adding to favorites', () => {
-    cy.get('.gen-quote-btn').click()
-    cy.get('.save-to-fav-btn').click()
-    .get('.warning').contains('Add an image!')
-  });
-
-  it('Should display alert if user has not picked a quote when adding to favorites', () => {
     cy.get('.gen-image-btn').click()
-    cy.get('.save-to-fav-btn').click()
+    .get('.save-to-fav-btn').click()
     .get('.warning').contains('Add a quote!')
   });
 
-  it('Should display alert if user tried to add same postcard to favorites', () => {
-    cy.get('.gen-image-btn').click()
+  // it('Should display alert if user has not picked an image when adding to favorites', () => {
+  //   cy.get('.gen-quote-btn').click()
+  //   cy.get('.save-to-fav-btn').click()
+  //   cy.get('.warning').contains('Add an image!')
+  // });
+
+  // it('Should display alert if user tried to add same postcard to favorites', () => {
+  //   cy.get('.gen-image-btn').click()
+  //   cy.get('.gen-quote-btn').click()
+  //   cy.get('.save-to-fav-btn').click().click()
+  //   .get('.warning').contains('Already saved!')
+  // });
+
+  it('Should display favorites when clicking view favorites button', () => {
+    cy.get('.view-fav-btn').click()
+    .get('.card-container').should('be.visible')
+  });
+
+  it('Should render a random quote when generate quote button is clicked', () => {
+    cy.intercept('GET', 'https://api.kanye.rest', {
+      statusCode: 200,
+      body: {
+        quote: "This is a great Kanye quote."
+      }
+    }).as('stub1')
     cy.get('.gen-quote-btn').click()
-    cy.get('.save-to-fav-btn').click()
-    cy.get('.save-to-fav-btn').click()
-    .get('.warning').contains('Already saved!')
+    .get('.postcard-container')
+    .get('.postcard')
+    .get('.quote-box').contains("This is a great Kanye quote.")
+  });
+
+  it('Should render an error message if fetch request fails', () => {
+    cy.intercept('GET', 'https://api.kanye.rest', {
+      statusCode: 404
+    }).as('stub1')
+    cy.get('.gen-quote-btn').click()
+    .get('.postcard-container')
+    .get('.postcard')
+    .get('.error').contains("Kanye couldn't deliver. Check back later!")
   });
 
 })
