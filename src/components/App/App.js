@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path='/' render={() => <GenerateSection addFavorite={addFavorite} favorites={favs}/>}/>
+        <Route exact path='/yuletide-yeezy' render={() => <GenerateSection addFavorite={addFavorite} favorites={favs}/>}/>
         <Route exact path='/favorites' render={() => <Favorites />}/>
       </Switch>
     </div>
