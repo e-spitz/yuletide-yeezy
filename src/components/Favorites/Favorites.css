@@ -5,6 +5,11 @@
   color: #3c8d64;
 }
 
+.create-link:hover {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
 .no-fav-header {
   font-size: 2.2em;
   font-weight: 500;

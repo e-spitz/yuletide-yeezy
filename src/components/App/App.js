@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path='/login' render={() => <Login />}/>
+        <Route exact path='/' render={() => <Login />}/>
         <Route exact path='/yuletide-yeezy' render={() => <GenerateSection addFavorite={addFavorite} favorites={favs}/>}/>
         <Route exact path='/favorites' render={() => <Favorites />}/>
         <Route exact path='*' render={() => <Error />}/>
