@@ -36,7 +36,7 @@ const cards = savedFavCards.map((card) => (<Card card={card} key={card.id} remov
 
   return (
     <>
-    {!cards.length && <h2 className='no-fav-header'>No favorites yet. Go <NavLink to='/' className='create-link'>CREATE!</NavLink></h2>}
+    {!cards.length && <h2 className='no-fav-header'>No favorites yet. Go <NavLink to='/yuletide-yeezy' className='create-link'>CREATE!</NavLink></h2>}
     <section className='card-container'>{cards}</section>
     </>
   );

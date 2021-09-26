@@ -1,0 +1,47 @@
+.login-page {
+  height: 100vh;
+  width: 100%;
+}
+
+.login-header {
+  font-style: italic;
+}
+
+.yeeson {
+  font-style: normal;
+  font-family: 'Italianno';
+  font-size: 4em;
+  letter-spacing: 5px;
+  font-weight: lighter;
+}
+
+.question {
+  font-size: 2em;
+}
+
+.yes-no-btn {
+  border: none;
+  background: black;
+  color: whitesmoke;
+  margin: 1%;
+  padding: 1%;
+  font-size: 2em;
+  border-radius: 2%;
+}
+
+.yes-no-btn {
+  cursor: pointer;
+}
+
+.yes:hover {
+  color: #3c8d64;
+}
+
+.no:hover {
+  color: #e21b09;
+}
+
+.so-sorry {
+  font-size: 2em;
+  font-weight: bold;
+}
