@@ -23,24 +23,27 @@ describe('HomePage', () => {
     .get('.view-fav-btn').contains('view favorites')
   });
 
-  it('Should display alert if user has not picked an image when adding to favorites', () => {
-    cy.get('.gen-image-btn').click()
-    .get('.save-to-fav-btn').click()
+  it('Should display alert if user has not picked an quote when adding to favorites', () => {
+    cy.get('.save-to-fav-btn').click()
     .get('.warning').contains('Add a quote!')
+    .get('.gen-quote-btn').click()
+    .get('.save-to-fav-btn').click()
   });
 
-  // it('Should display alert if user has not picked an image when adding to favorites', () => {
-  //   cy.get('.gen-quote-btn').click()
-  //   cy.get('.save-to-fav-btn').click()
-  //   cy.get('.warning').contains('Add an image!')
-  // });
+  it('Should display an add an image alert', () => {
+    cy.get('.gen-quote-btn').click()
+    cy.wait(2000)
+    cy.get('.save-to-fav-btn').click()
+    cy.get('.warning').contains('Add an image!')
+  })
 
-  // it('Should display alert if user tried to add same postcard to favorites', () => {
-  //   cy.get('.gen-image-btn').click()
-  //   cy.get('.gen-quote-btn').click()
-  //   cy.get('.save-to-fav-btn').click().click()
-  //   .get('.warning').contains('Already saved!')
-  // });
+  it('Should display alert if user tried to add same postcard to favorites', () => {
+    cy.get('.gen-image-btn').click()
+    cy.get('.gen-quote-btn').click()
+    cy.wait(2000)
+    cy.get('.save-to-fav-btn').click().click()
+    .get('.warning').contains('Already saved!')
+  });
 
   it('Should display favorites when clicking view favorites button', () => {
     cy.get('.view-fav-btn').click()
@@ -69,5 +72,12 @@ describe('HomePage', () => {
     .get('.postcard')
     .get('.error').contains("Kanye couldn't deliver. Check back later!")
   });
+
+  it('Should display a basic postcard template on load', () => {
+    cy.get('.postcard-container')
+    .get('.postcard')
+    .get('.quote-box').contains('Quote goes here...')
+    .get('.image-box').should('be.visible')
+  })
 
 })
