@@ -15,14 +15,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main className="App">
       <Switch>
         <Route exact path='/' render={() => <Login />}/>
         <Route exact path='/yuletide-yeezy' render={() => <GenerateSection addFavorite={addFavorite} favorites={favs}/>}/>
         <Route exact path='/favorites' render={() => <Favorites />}/>
         <Route exact path='*' render={() => <Error />}/>
       </Switch>
-    </div>
+    </main>
   );
 }
 
