@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { PostcardContainer } from '../PostcardContainer/PostcardContainer'
 import { Header } from '../Header/Header'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 export const GenerateSection = ({ addFavorite, favorites }) => {
   const [quote, setQuote] = useState('')
@@ -93,4 +94,16 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
     </div>
     </>
   );
+}
+
+GenerateSection.propTypes = {
+  addFavorite: PropTypes.func,
+  favorites: PropTypes.array,
+  quote: PropTypes.string,
+  image: PropTypes.string,
+  btnClicked: PropTypes.bool,
+  imgBtnClicked: PropTypes.bool,
+  error: PropTypes.string,
+  warning: PropTypes.string,
+  favBtnClicked: PropTypes.bool
 }
