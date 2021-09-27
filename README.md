@@ -14,7 +14,7 @@
 
 Are you a Kanye fan? Do you love, love, LOVE the holidays? Well, this is the app for you! Introducing **Yuletide Yeezy**. Your one stop shop for generating holiday cards with original Kanye West quotes and festive Kanye West photos.
 
-**Yuletide Yeezy** was built with React, and uses the [Kanye Rest API](https://api.kanye.rest) to generate the random Kanye quotes. This project is the final solo project of Mod3 at [Turing](turing.edu) and the original spec can be found [here.](https://frontend.turing.edu/projects/module-3/showcase.html) The project learning goals were to build and design an app using React, React Router, a third party API, and testing with Cypress.
+**Yuletide Yeezy** was built with React, and uses the [Kanye Rest API](https://api.kanye.rest) to generate the random Kanye quotes. This project is the final solo project of Mod3 at [Turing](turing.edu) and the original spec can be found [here.](https://frontend.turing.edu/projects/module-3/showcase.html) The project learning goals were to build and design an app using React, React Router, a third party API, and testing with Cypress. We were asked to come up with a super niche idea, so here you have it, a Kanye quote and image holiday card generator.
 
 ### Learning Goals
 
@@ -38,17 +38,23 @@ To view this application on your local machine:
 
 ## Functionality 
 
-#### Login <br>
-![Login page]() 
+#### Login
+- User must be 18 years of age or older to enter the site, because as we all know, Kanye can say some pretty weird stuff.<br>
+![Login page](https://media.giphy.com/media/QEptcBeIjcHO3WbyUY/giphy.gif?cid=790b7611320baf571bb36a9f14ad3c595ffe76063676638f&rid=giphy.gif&ct=g) 
 
 #### Tis the Yeeson to Create
 - User may generate random quotes and images until they find the perfect combo for their yuletide card!<br>
-![Demo of creating a card]()
-
+![Demo of creating a card](https://media.giphy.com/media/zmowlVJ5xGAtSQZnHK/giphy.gif?cid=790b7611a5fd51f7d7ed5f2f0ddf0a6b47237ccf93c0d53b&rid=giphy.gif&ct=g)
 
 #### View Favorites
 - User can add a card to favorites and view them by the simple click of a button. These are added to Local Storage, so the users favorites will be there whenever they revisit the page!<br>
-![Demo of favoriting]()
+![Demo of favoriting](https://media.giphy.com/media/iG7oVkgH5FO1pBJFAH/giphy.gif?cid=790b7611639ed00647a5dadd41bb301871af9bbcc0359c31&rid=giphy.gif&ct=g)
+- If a user doesn't have any favorites, they'll be prompted to CREATE SOME!<br>
+![Demo of no favorites](https://media.giphy.com/media/PPQCrES3jvZzeFpDvG/giphy.gif?cid=790b7611cc54506d6eb7b5e1ad133dab94ecb799c0bdac1a&rid=giphy.gif&ct=g)
+
+### Bad URL
+- If a user types in a bad url, they will be directed to an error page, where Kanye guides them home.<br>
+![Demo of bad url](https://media.giphy.com/media/jVmEGKC90KbpUgOk3q/giphy.gif?cid=790b7611f6c773cf0583cb1c8befa2a7118484535632d067&rid=giphy.gif&ct=g)
 
 
 ## Future Additions
