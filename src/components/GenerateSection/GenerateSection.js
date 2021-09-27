@@ -3,8 +3,7 @@ import { fetchQuote } from '../../apiCalls';
 import { useState } from 'react';
 import { PostcardContainer } from '../PostcardContainer/PostcardContainer'
 import { Header } from '../Header/Header'
-import { Favorites } from '../Favorites/Favorites'
-import { NavLink, Route } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export const GenerateSection = ({ addFavorite, favorites }) => {
   const [quote, setQuote] = useState('')
@@ -95,8 +94,3 @@ export const GenerateSection = ({ addFavorite, favorites }) => {
     </>
   );
 }
-//
-// {favBtnClicked && <div className='fav-snowflake'>
-// <img className='snowflake' src="https://img.icons8.com/ios-glyphs/30/000000/snowflake.png"></img></div>}
-// {favorites.length ? <i class="fas fa-heart"></i> : ''}
-//add some sort of visual to show that add to favs button did something (i have heart adding to view favs button for now)

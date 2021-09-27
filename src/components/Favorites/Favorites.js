@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Card } from '../Card/Card'
 import { Header } from '../Header/Header'
 import { NavLink } from 'react-router-dom'
-
+import PropTypes from 'prop-types';
 
 export const Favorites = () => {
 const [savedFavCards, setSavedFavCards] = useState([])
@@ -42,4 +42,10 @@ const cards = savedFavCards.map((card) => (<Card card={card} key={card.id} remov
       <section className='card-container'>{cards}</section>
     </>
   );
+}
+
+Favorites.propTypes = {
+  savedFavCards: PropTypes.array,
+  getFromStorage: PropTypes.func,
+  removeFromStorage: PropTypes.func
 }
