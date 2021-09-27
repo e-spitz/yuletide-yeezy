@@ -27,7 +27,7 @@ To demonstrate the understanding of:
 
 ## Installation and Viewing 
 
-This application is deployed to Vercel. You may view the live application [here](yuletide-yeezy.vercel.app).
+This application is deployed to Vercel. You may view the live application [here](https://yuletide-yeezy.vercel.app/).
 
 To view this application on your local machine:
 
