@@ -15,7 +15,7 @@ function App() {
   }
 
   return (
-    <main className="App">
+    <main className="app">
       <Switch>
         <Route exact path='/' render={() => <Login />}/>
         <Route exact path='/yuletide-yeezy' render={() => <GenerateSection addFavorite={addFavorite} favorites={favs}/>}/>
