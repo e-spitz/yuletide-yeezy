@@ -16,11 +16,6 @@ function App() {
     setFavs([favObj, ...favs])
   }
 
-  // const checkNo = () => {
-  //   setNoClicked(true)
-  //   setTimeout(() => setNoClicked(false), 4000)
-  // }
-
   return (
     <div className="App">
       <Switch>
