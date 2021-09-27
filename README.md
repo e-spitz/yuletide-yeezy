@@ -1,71 +1,80 @@
-# Getting Started with Create React App
+# <p align="center">Tis the Yeeson with <i>YULETIDE YEEZY</i></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Table of Contents
+- [Overview](#overview)
+- [Learning Goals](#learning-goals)
+- [Installation & Viewing](#installation-and-viewing)
+- [Functionality](#functionality)
+- [Future Additions](#future-additions)
+- [Tech Stack](#tech-stack)
+- [Contributors](#contributors)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+Are you a Kanye fan? Do you love, love, LOVE the holidays? Well, this is the app for you! Introducing **Yuletide Yeezy**. Your one stop shop for generating holiday cards with original Kanye West quotes and festive Kanye West photos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Yuletide Yeezy** was built with React, and uses the [Kanye Rest API](https://api.kanye.rest) to generate the random Kanye quotes. This project is the final solo project of Mod3 at [Turing](turing.edu) and the original spec can be found [here.](https://frontend.turing.edu/projects/module-3/showcase.html) The project learning goals were to build and design an app using React, React Router, a third party API, and testing with Cypress.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Learning Goals
 
-### `npm test`
+To demonstrate the understanding of:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React fundementals
+- Modular code and component structure
+- React Router to create a multi-page application
+- Cypress testing to test the application end-to-end
 
-### `npm run build`
+## Installation and Viewing 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This application is deployed to Vercel. You may view the live application [here](import deployed link).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To view this application on your local machine:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone down this repository
+- Run `npm i` in your terminal
+- Run `npm start` in your terminal
+- To view Cypress tests, open a separate tab in your terminal and run `npm run cypress`
 
-### `npm run eject`
+## Functionality 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Login <br>
+![Login page]() 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Tis the Yeeson to Create
+- User may generate random quotes and images until they find the perfect combo for their yuletide card!<br>
+![Demo of creating a card]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### View Favorites
+- User can add a card to favorites and view them by the simple click of a button. These are added to Local Storage, so the users favorites will be there whenever they revisit the page!<br>
+![Demo of favoriting]()
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Additions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- *Responsive Design*: User will be able to view the app across all devices such as phones, tablets, and desktops. 
+- *Music*: User can enjoy some sweet Kanye tunes while creating their favorite designs. 
+- *Share with friends and family*: User will be able to send their postcard design to friends or family via email or social media platforms.
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<div align="left">  
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat-square" alt="React Badge">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square" alt="JavaScript Badge">
+<img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat-square" alt="CSS3 Badge">
+<img src="https://img.shields.io/badge/Cypress-17202C?logo=cypress&logoColor=fff&style=flat-square" alt="Cypress Badge"> 
+</div> 
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributors
+- [Erica Spitz](https://github.com/e-spitz)
 
-### Making a Progressive Web App
+### Project Managers
+- [Kayla Gordon](https://github.com/kaylaewood)
+- [Scott Ertmer](https://github.com/sertmer)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**************************************************************************
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# yuletide-yeezy
+**[Back to top](#table-of-contents)**
