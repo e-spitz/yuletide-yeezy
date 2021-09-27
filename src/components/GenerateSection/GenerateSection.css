@@ -21,6 +21,8 @@
   width: 20vw;
   font-size: 1.2em;
   border-bottom: 1px solid black;
+  box-shadow: 0 0 4px #999;
+  margin: 1px;
 }
 
 .gen-quote-btn {
@@ -36,7 +38,7 @@
 .save-to-fav-btn:hover,
 .view-fav-btn:hover  {
   cursor: pointer;
-  color: #00556f;
+  color: #DB092C;
   background: whitesmoke;
 }
 
@@ -44,12 +46,3 @@
   font-size: 1.3em;
   color: whitesmoke;
 }
-
-/* try and animate a logo effect on add to fav button click */
-
-/* .snowflake {
-animation: slide;
-position: fixed;
-opacity: 50%;
-animation: slide 2s;
-} */

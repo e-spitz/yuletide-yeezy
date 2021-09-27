@@ -1,6 +1,7 @@
 import './Login.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 export const Login = () => {
 
@@ -23,4 +24,9 @@ export const Login = () => {
           {noClicked && <h3 className='so-sorry'>So sorry! Yeezy says yous ain't old enough to enter.</h3>}
     </div>
   );
+}
+
+Login.propTypes = {
+  noClicked: PropTypes.bool,
+  onClick: PropTypes.func
 }

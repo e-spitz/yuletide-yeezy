@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Header } from '../Header/Header'
+
 import "./Error.css";
 
 export const Error = () => {

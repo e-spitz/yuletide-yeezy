@@ -1,4 +1,5 @@
 import './PostcardContainer.css';
+import PropTypes from 'prop-types';
 
 export const PostcardContainer = ({ error, quote, btnClicked, imgBtnClicked, image }) => {
 
@@ -13,4 +14,12 @@ export const PostcardContainer = ({ error, quote, btnClicked, imgBtnClicked, ima
        </article>
       </section>
    );
+ }
+
+ PostcardContainer.propTypes = {
+   error: PropTypes.string,
+   quote: PropTypes.string,
+   btnClicked: PropTypes.bool,
+   imgBtnClicked: PropTypes.bool,
+   image: PropTypes.string
  }
