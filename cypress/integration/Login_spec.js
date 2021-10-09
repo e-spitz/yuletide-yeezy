@@ -1,7 +1,7 @@
 describe("Login Page", () => {
 
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('http://localhost:3000')
   });
 
   it('Should show a header for login page', () => {
